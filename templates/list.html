@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+<h1>Employee information</h1>
+<table>
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Contact</th>
+        <th scope="col">Role</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Action</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for emp in employees %}
+    <tr>
+       <th scope="row">{{emp.emp_name}}</th>
+        <td>{{emp.emp_email}}</td>
+        <td>{{emp.emp_contact}}</td>
+        <td>{{emp.emp_role}}</td>
+        <td>{{emp.emp_salary}}</td>
+        <td>
+            <a href="http://127.0.0.1:8000/emp/edit/{emp_id}">Edit</a>
+            <a href="http://127.0.0.1:8000/emp/edit/{emp_id}">Edit</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
